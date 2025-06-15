@@ -28,5 +28,5 @@ Project ini adalah alat identifikasi tipe kepribadian MBTI berbasis AI yang meng
 
 Proyek ini bertujuan untuk memberikan cara yang mudah dan efisien untuk mengidentifikasi tipe kepribadian MBTI menggunakan teknik pemrosesan bahasa alami (NLP).
 
-'- Rony Andrean -'
+'- Kenny Janson -'
 "# MBTI-Personality-Tracking" 
