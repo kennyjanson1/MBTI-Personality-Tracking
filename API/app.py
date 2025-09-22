@@ -5,7 +5,7 @@ import numpy as np
 import os
 
 app = Flask(__name__)
-CORS(app, origins=["https://mbti-personality-type-identification.vercel.app"])
+CORS(app, origins=["*"])
 
 # Load the vectorizer and model
 try:
@@ -26,6 +26,7 @@ def predict():
         # Get user input from the request
         data = request.json
         user_text = data.get("text", "")
+        print("Received input:", user_text)
 
         if not user_text or not isinstance(user_text, str):
             return jsonify({"error": "Invalid or empty text provided"}), 400
@@ -37,6 +38,7 @@ def predict():
         # Get prediction probabilities
         try:
             probabilities = loaded_model.predict_proba(input_vector)
+            print("Raw probabilities:", probabilities)  # 🟡 Tambah log prob
         
             # Check shape of probabilities to avoid errors
             if probabilities.shape[1] == 1:
